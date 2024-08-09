@@ -1,15 +1,14 @@
 import './bootstrap';
 import '~bootstrap';
-
-import { createApp } from 'vue';
-import Home from './components/Home.vue';
-
-
-const app = createApp({});
-
-app.component('home-component', Home);
-
-app.mount("#app");
+import { createApp } from 'vue'
+import Counter from './components/Counter.vue'
 
 
-            
+const app = createApp()
+
+app.component('counter', Counter)
+
+app.mount('#app')
+
+
+

@@ -15,8 +15,6 @@
                     @endif
 
                     {{ __('You are logged in!') }}
-                    <home-component></home-component>
-
                 </div>
             </div>
         </div>
