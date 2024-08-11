@@ -18,5 +18,7 @@ Algunos comandos útiles son:
 - php artisan serve
 - npm run dev
 - npm install
+- php artisan config:clear
+- php artisan route:list
 
 
