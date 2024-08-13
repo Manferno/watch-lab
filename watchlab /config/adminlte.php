@@ -114,8 +114,8 @@ return [
         'mode' => 'fullscreen',
         'img' => [
             'path' => 'vendor/adminlte/dist/img/LOGO-WL.png',
-            'alt' => 'AdminLTE Preloader Image',
-            'effect' => 'animation__shake',
+            'alt' => 'Watchlab Preloader Image',
+            'effect' => 'animation__wobble',
             'width' => 60,
             'height' => 60,
         ],
@@ -156,7 +156,7 @@ return [
     'layout_boxed' => null,
     'layout_fixed_sidebar' => null,
     'layout_fixed_navbar' => null,
-    'layout_fixed_footer' => null,
+    'layout_fixed_footer' => true,
     'layout_dark_mode' => null,
 
     /*
@@ -295,11 +295,7 @@ return [
 
     'menu' => [
         // Navbar items:
-        [
-            'type' => 'navbar-search',
-            'text' => 'search',
-            'topnav_right' => true,
-        ],
+       
         [
             'type' => 'fullscreen-widget',
             'topnav_right' => true,
@@ -319,16 +315,16 @@ return [
             'icon' => 'fas fa-clipboard-list',
         ],
         [
+            'text' => 'Equipos',
+            'url' => 'equipos',
+            'icon' => 'fas fa-desktop',
+        ],
+        [
             'text' => 'Perfil',
             'url' => 'perfil',
             'icon' => 'fas fa-fw fa-user',
         ],
-        [
-            'text' => 'Salir',
-            'url' => 'logout',
-            'icon' => 'fas fa-sign-out-alt',
-        ],
-        
+       
     ],
 
     /*

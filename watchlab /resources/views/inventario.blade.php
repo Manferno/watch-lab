@@ -10,6 +10,7 @@
             @stop
             @section('content')
                 <p>Bienvenido al Inventario de WatchLab.</p>
+              
             @stop
         </div>
     </div>

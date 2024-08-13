@@ -28,3 +28,4 @@ Route::get('/logout', '\App\Http\Controllers\Auth\LoginController@logout');
 Route::get('/perfil', 'App\Http\Controllers\PerfilController@index');
 Route::get('/inventario', 'App\Http\Controllers\InventarioController@index');
 
+Route::resource('/equipos', App\Http\Controllers\EquiposController::class);

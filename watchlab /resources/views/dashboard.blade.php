@@ -29,13 +29,20 @@
     </div>
     
     <div class="row">
-
+        <div class="col-lg-6">
+            <x-adminlte-card title="Estado de los Equipos" theme="purple" icon="fas fa-chart-pie"  >
+                A removable and collapsible card with purple theme...
+            </x-adminlte-card>
+        </div>
+        <div class="col-lg-6">
+            <x-adminlte-card title="Tipo de Equipos" theme="purple" icon="far fa-chart-bar"  >
+                <div style="width: 800px;"><canvas id="acquisitions"></canvas></div>
+            </x-adminlte-card>
+        </div>
     </div>
-  
-
-   
 
 
+    <script type="module" src="/src/acquisitions.js"></script>
             @stop
         </div>
     </div>
