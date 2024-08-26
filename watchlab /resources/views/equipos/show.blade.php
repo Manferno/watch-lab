@@ -10,7 +10,7 @@
             @stop
             @section('content')
                
-               <form class="form-horizontal" method="post" action="{{URL::to('equipos/' . $item->id)}}">
+               <form class="form-horizontal" method="post" action="{{URL::to('equipos/' . $item->id)}}" onsubmit="return confirm('¿Desea modificar el equipo?');">
                @csrf 
                <input type="hidden" name = "_method" value ="put">
                    <div class="form-group row">
@@ -32,14 +32,32 @@
                    
                    <div class="form-group row">
                        <div class="col-lg-2">
-                           <button type="submit" class="btn btn-secondary">Modificar</button>
+                           <button type="submit" class="btn btn-warning">Modificar</button>
                        </div>
-                      
                    </div>
                    
                    
                </form>
+                <div class="col-lg-2">       
+                    <a href="<?=$_SERVER["HTTP_REFERER"]?>" class="btn btn-secondary">Volver</a>
+                </div>
+                       
             @stop
         </div>
     </div>
 </div>
+
+
+<script>
+function validate(form) {
+
+if(!valid) {
+    alert('Please correct the errors in the form!');
+    return false;
+}
+else {
+    return confirm('Do you really want to submit the form?');
+}
+}
+</script>
+<form onsubmit="return validate(this);">

@@ -10,7 +10,7 @@
             @stop
             @section('content')
                 <p>Bienvenido al Equipos de WatchLab.</p>
-                <a href="{{ URL::to('equipos/create')}}" class="btn btn-primary">Añadir equipo</a>
+                <a href="{{ URL::to('equipos/create')}}" class="btn btn-success mb-1">Añadir equipo</a>
                 <table class="table">
                     <thead>
                         <tr>
@@ -28,10 +28,10 @@
                             <td> {{$item->tipo}}</td>
                             <td>  
                                 <a href="{{ URL::to('equipos/' . $item->id)}}" class="btn btn-primary">Modificar equipo</a> 
-                                <form method="post" action="{{ URL::to('equipos/' . $item->id)}}">
+                                <form method="post" action="{{ URL::to('equipos/' . $item->id)}}" onsubmit="return confirm('¿Desea eliminar el equipo?');">
                                     @csrf
                                     <input type="hidden" name = "_method" value ="delete">
-                                    <button type="submit" class="btn btn-danger">Eliminar</button>
+                                    <button type="submit" class="btn btn-danger mt-1">Eliminar</button>
                                 </form>
                             </td>
                         </tr>
@@ -43,3 +43,18 @@
         </div>
     </div>
 </div>
+
+
+<script>
+function validate(form) {
+
+if(!valid) {
+    alert('Please correct the errors in the form!');
+    return false;
+}
+else {
+    return confirm('Do you really want to submit the form?');
+}
+}
+</script>
+<form onsubmit="return validate(this);">
