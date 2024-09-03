@@ -28,6 +28,60 @@
                            <input type="text" name="tipo" id="tipo" class="form-control">
                        </div>
                    </div>
+
+                   <div class="form-group row">
+                       <div class="col-lg-2">
+                           Marca
+                       </div>
+                       <div class="col-lg-4">
+                           <input type="text" name="marca" id="marca" class="form-control">
+                       </div>
+                   </div>
+
+                   <div class="form-group row">
+                       <div class="col-lg-2">
+                           Número de Serie
+                       </div>
+                       <div class="col-lg-4">
+                           <input type="text" name="numero_serie" id="numero_serie" class="form-control">
+                       </div>
+                   </div>
+
+                   <div class="form-group row">
+                       <div class="col-lg-2">
+                           Modelo
+                       </div>
+                       <div class="col-lg-4">
+                           <input type="text" name="modelo" id="modelo" class="form-control">
+                       </div>
+                   </div>
+
+                   <div class="form-group row">
+                       <div class="col-lg-2">
+                           Fecha Adquisición
+                       </div>
+                       <div class="col-lg-4">
+                           <input type="date" name="fecha_adquisicion" id="fecha_adquisicion" class="form-control">
+                       </div>
+                   </div>
+
+                   <div class="form-group row">
+                       <div class="col-lg-2">
+                           Estado
+                       </div>
+                       <div class="col-lg-4">
+                           <input type="text" name="estado" id="estado" class="form-control">
+                       </div>
+                   </div>
+
+                   <div class="form-group row">
+                       <div class="col-lg-2">
+                           Ubicación
+                       </div>
+                       <div class="col-lg-4">
+                           <input type="text" name="ubicacion" id="ubicacion" class="form-control">
+                       </div>
+                   </div>
                    
                    <div class="form-group row">
                        <div class="col-lg-2">
@@ -54,6 +108,36 @@ function validarFormulario(evento) {
   var tipo = document.getElementById('tipo').value;
   if (tipo.length == 0) {
     alert('No has escrito nada en el Tipo');
+    return;
+  }
+  var tipo = document.getElementById('marca').value;
+  if (tipo.length == 0) {
+    alert('No has escrito nada en el Marca');
+    return;
+  }
+  var tipo = document.getElementById('numero_serie').value;
+  if (tipo.length == 0) {
+    alert('No has escrito nada en el Número de Serie');
+    return;
+  }
+  var tipo = document.getElementById('modelo').value;
+  if (tipo.length == 0) {
+    alert('No has escrito nada en el Modelo');
+    return;
+  }
+  var tipo = document.getElementById('fecha_adquisicion').value;
+  if (tipo.length == 0) {
+    alert('No has escrito nada en la Fecha de adquisición');
+    return;
+  }
+  var tipo = document.getElementById('estado').value;
+  if (tipo.length == 0) {
+    alert('No has escrito nada en el Estado');
+    return;
+  }
+  var tipo = document.getElementById('ubicacion').value;
+  if (tipo.length == 0) {
+    alert('No has escrito nada en el Ubicación');
     return;
   }
   this.submit();

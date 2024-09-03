@@ -35,6 +35,12 @@ class EquiposController extends Controller
        $equipo = new Equipo;
        $equipo->nombre= $request ->nombre;
        $equipo->tipo= $request ->tipo;
+       $equipo->marca= $request ->marca;
+       $equipo->numero_serie= $request ->numero_serie;
+       $equipo->modelo= $request ->modelo;
+       $equipo->fecha_adquisicion= $request ->fecha_adquisicion;
+       $equipo->estado= $request ->estado;
+       $equipo->ubicacion= $request ->ubicacion;
        $equipo->save();
 
        return Redirect::to('equipos');
