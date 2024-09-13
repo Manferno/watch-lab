@@ -310,19 +310,14 @@ return [
             'icon' => 'fas fa-tachometer-alt',
         ],
         [
-            'text' => 'Inventario',
-            'url' => 'inventario',
-            'icon' => 'fas fa-clipboard-list',
-        ],
-        [
             'text' => 'Equipos',
             'url' => 'equipos',
             'icon' => 'fas fa-desktop',
         ],
         [
-            'text' => 'Perfil',
-            'url' => 'perfil',
-            'icon' => 'fas fa-fw fa-user',
+            'text' => 'Licencias',
+            'url' => 'licencias',
+            'icon' => 'fas fa-key',
         ],
        
     ],
@@ -429,6 +424,17 @@ return [
                     'type' => 'js',
                     'asset' => false,
                     'location' => '//cdnjs.cloudflare.com/ajax/libs/pace/1.0.2/pace.min.js',
+                ],
+            ],
+        ],
+         // Añade tu archivo CSS personalizado aquí
+         'CustomCSS' => [
+            'active' => true,
+            'files'  => [
+                [
+                    'type' => 'css',
+                    'asset' => true,
+                    'location' => 'css/custom.css',
                 ],
             ],
         ],

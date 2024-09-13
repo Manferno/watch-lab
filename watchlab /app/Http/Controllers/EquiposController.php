@@ -11,11 +11,15 @@ class EquiposController extends Controller
     /**
      * Display a listing of the resource.
      */
-    public function index()
+    public function index(Request $request)
     {
-        $equipos = Equipo::get();
-        return view('equipos', compact('equipos'));
+        $search = $request->get('search');
+        $equipos = Equipo::when($search, function ($query, $search) {
+            return $query->where('nombre', 'like', "%{$search}%")
+                         ->orWhere('tipo', 'like', "%{$search}%");
+        })->get();
 
+        return view('equipos', compact('equipos'));
     }
 
     /**
@@ -56,21 +60,19 @@ class EquiposController extends Controller
     }
 
     /**
-     * Show the form for editing the specified resource.
-     */
-    public function edit(Note $note)
-    {
-        //
-    }
-
-    /**
      * Update the specified resource in storage.
      */
     public function update(Request $request, $id)
     {
         $item = Equipo::find($id);
-        $item->nombre= $request ->nombre;
-        $item->tipo= $request ->tipo;
+        $item->nombre = $request->nombre;
+        $item->tipo = $request->tipo;
+        $item->marca = $request->marca;
+        $item->numero_serie = $request->numero_serie;
+        $item->modelo = $request->modelo;
+        $item->fecha_adquisicion = $request->fecha_adquisicion;
+        $item->estado = $request->estado;
+        $item->ubicacion = $request->ubicacion;
         $item->save();
 
         return Redirect::to('equipos');
@@ -84,5 +86,10 @@ class EquiposController extends Controller
         Equipo::find($id)->delete();
         return Redirect::to('equipos');
 
+    } 
+
+    public function __construct()
+    {
+        $this->middleware('auth');
     }
 }

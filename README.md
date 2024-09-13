@@ -13,10 +13,12 @@ Los datos que permite guardar el inventario son los siguientes:
 ## Como Ejecutar
 
 Para el uso de esta herramienta es necesario la compilación mediante npm y posterior levantamiento en laravel 11.
-Algunos comandos útiles son:
-
+Con estos comandos ya sería suficiente para poder desplegar el proyecto en local:
 - php artisan serve
 - npm run dev
+
+Algunos comandos útiles extras son:
+
 - npm install
 - php artisan config:clear
 - php artisan route:list

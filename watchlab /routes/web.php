@@ -2,18 +2,20 @@
 
 use Illuminate\Support\Facades\Route;
 
+
 Route::get('/', function () {
     return view('dashboard');
 });
 
 Route::get('/home', function () {
-    return view('home');
+    return view('dashboard');
 });
 
 Auth::routes();
 
 
 Route::get('/dashboard', [App\Http\Controllers\HomeController::class, 'index'])->name('dashboard');
+
 
 
 // Route::get('/dashboard', [DashboardController::class, 'index'])->middleware('auth');
@@ -29,3 +31,4 @@ Route::get('/perfil', 'App\Http\Controllers\PerfilController@index');
 Route::get('/inventario', 'App\Http\Controllers\InventarioController@index');
 
 Route::resource('/equipos', App\Http\Controllers\EquiposController::class);
+Route::resource('/licencias', App\Http\Controllers\LicenciasController::class);

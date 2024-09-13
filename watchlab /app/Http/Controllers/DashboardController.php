@@ -1,7 +1,8 @@
 <?php
-
 namespace App\Http\Controllers;
 
+use App\Models\Equipo;
+use App\Models\Licencia;
 use Illuminate\Http\Request;
 
 class DashboardController extends Controller
@@ -18,8 +19,13 @@ class DashboardController extends Controller
 
     public function index()
     {
-        return view('dashboard');
+        $equipos = Equipo::all();
+        $licencias = Licencia::all();
+        return view('dashboard', compact('equipos', 'licencias'));
+       
     }
+
+
 
 }
 

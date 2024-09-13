@@ -13,12 +13,13 @@
                <form class="form-horizontal" method="post" action="{{URL::to('equipos/' . $item->id)}}" onsubmit="return confirm('¿Desea modificar el equipo?');">
                @csrf 
                <input type="hidden" name = "_method" value ="put">
+               <input type="hidden" name = "_method" value ="put">
                    <div class="form-group row">
-                       <div class="col-lg-2">
+                   <div class="col-lg-2">
                            Nombre
                        </div>
                        <div class="col-lg-4">
-                           <input type="text" name="nombre" class="form-control" value="{{$item->nombre}}">
+                           <input type="text" name="nombre" id="nombre" class="form-control" value="{{$item->nombre}}">
                        </div>
                    </div>
                    <div class="form-group row">
@@ -26,16 +27,62 @@
                            Tipo
                        </div>
                        <div class="col-lg-4">
-                           <input type="text" name="tipo" class="form-control" value="{{$item->tipo}}">
+                           <input type="text" name="tipo" id="tipo" class="form-control" value="{{$item->tipo}}">
                        </div>
                    </div>
-                   
+                   <div class="form-group row">
+                       <div class="col-lg-2">
+                           Marca
+                       </div>
+                       <div class="col-lg-4">
+                           <input type="text" name="marca" id="marca" class="form-control" value="{{$item->marca}}">
+                       </div>
+                   </div>
+                   <div class="form-group row">
+                       <div class="col-lg-2">
+                           Número de Serie
+                       </div>
+                       <div class="col-lg-4">
+                           <input type="text" name="numero_serie" id="numero_serie" class="form-control" value="{{$item->numero_serie}}">
+                       </div>
+                   </div>
+                   <div class="form-group row">
+                       <div class="col-lg-2">
+                           Modelo
+                       </div>
+                       <div class="col-lg-4">
+                           <input type="text" name="modelo" id="modelo" class="form-control" value="{{$item->modelo}}">
+                       </div>
+                   </div>
+                   <div class="form-group row">
+                       <div class="col-lg-2">
+                           Fecha Adquisición
+                       </div>
+                       <div class="col-lg-4">
+                           <input type="date" name="fecha_adquisicion" id="fecha_adquisicion" class="form-control" value="{{$item->fecha_adquisicion}}">
+                       </div>
+                   </div>
+                   <div class="form-group row">
+                       <div class="col-lg-2">
+                           Estado
+                       </div>
+                       <div class="col-lg-4">
+                           <input type="text" name="estado" id="estado" class="form-control" value="{{$item->estado}}">
+                       </div>
+                   </div>
+                   <div class="form-group row">
+                       <div class="col-lg-2">
+                           Ubicación
+                       </div>
+                       <div class="col-lg-4">
+                           <input type="text" name="ubicacion" id="ubicacion" class="form-control" value="{{$item->ubicacion}}">
+                       </div>
+                   </div>
                    <div class="form-group row">
                        <div class="col-lg-2">
                            <button type="submit" class="btn btn-warning">Modificar</button>
                        </div>
                    </div>
-                   
                    
                </form>
                 <div class="col-lg-2">       
