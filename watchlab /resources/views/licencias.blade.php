@@ -43,7 +43,7 @@
                             <td> {{$item->fecha_expiracion}}</td>
                             <td>
                                 <a href="{{ URL::to('licencias/' . $item->id)}}" class="btn btn-primary">Ver Detalles</a>
-                                <form action="{{ URL::to('licencias/' . $item->id) }}" method="POST" style="display:inline;">
+                                <form action="{{ URL::to('licencias/' . $item->id) }}" method="POST" style="display:inline;" onsubmit="return confirm('¿Desea eliminar la licencia?');">
                                     @csrf
                                     @method('DELETE')
                                     <button type="submit" class="btn btn-danger">Eliminar</button>

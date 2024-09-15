@@ -56,6 +56,7 @@
                                 @endforeach
                             </select>
                         </div>
+                        <p>Mantenga presionada la tecla Control, Command o Shift, para seleccionar más de una opción </p>
                     </div>
 
                    <div class="form-group row">
